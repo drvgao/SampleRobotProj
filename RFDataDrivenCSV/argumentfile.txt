@@ -1,0 +1,11 @@
+--variable run_env:qa1
+--variable dev_env:
+--variable create_ssh_connections:True
+--variable process_oustanding_draws:False
+--variable TESTAMP_PROXY_URL:http://10.0.75.2:9999
+--variable Rolling_time_allowed:True
+--variable close_browsers:False
+--loglevel DEBUG
+-C off
+-W 92
+-d results
