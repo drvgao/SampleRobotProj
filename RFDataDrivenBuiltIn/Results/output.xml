@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.3 (Python 3.6.5 on win32)" generated="20180519 23:29:56.233">
+<suite id="s1" name="RFDataDrivenBuiltIn" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenBuiltIn">
+<suite id="s1-s1" name="Tests" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenBuiltIn\Tests">
+<suite id="s1-s1-s1" name="Cars" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenBuiltIn\Tests\Cars.robot">
+<test id="s1-s1-s1-t1" name="Invalid login scenarios should display correct error messages">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180519 23:29:56.507" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<msg timestamp="20180519 23:29:59.562" level="DEBUG">POST http://127.0.0.1:4442/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"profile": "UEsDBBQAAAAIALy7s0xXGshajQMAAD0NAAAHAAAAdXNlci5qc6VWTW/UMBC9I/EfUE8gsVbLxwVOpS0SUkURq4qj5diTjbuObezxpvvvGScbiLabD+CWj/c89puZN04RAvcBypdnRXANvTHlatZoq1zDVKo9AysKA+rs9QsMCV59fP4sPSUZgRBCsgN0KUwcg1toUBQsBUPAM1G4hB8KI+z2bJLgxQYWRogoAibPMoWg5zOwytVwgC7ZzjGNux0dXytgdURn22X0xroAYyvQJ3Vnf7Q6x4tzpi0Gd//9dmYDOTm1eOSyChSaRxm0R07Cc9R1Dvv2+KQ9YyE0gHcBuTCGP0QOjxI8amfj6fQ/iJ3oFmauw7FYueaLvaJHZ+A0ywI2LmyZFMTZwSpHFGZFgJ2WcwmOIFPQuGcy9rU5hjxOUgNGZtXmy26KyoRSOp9VzK3SQKECHTBwIbOOPFGSU0RQXELAEU0HrBhTjvmbpekDhDlaJwq3IovLYQd2LJTwniWvqHeZSOhGdByglvWe0tEbsQd1c3G+/uqQkkqMd2No11jjhKIqtSR1aCvoRwV2nZOg7WYm2s397SXr+2/apVroW9ZlY9bStN1SVYOlLiBz69L9ZhZMTtW55wTalSURxuq2RwUQKusDCJJ2+1mHiJekiBzrq9/uJEpon0m8pXY5pNTCNCIsdloQQVaHCpnFmjImnxu+N/9Ri4UYs6EgmShJ0XZCSabHZRCxmotTgTFMViC311CKZPBT92eGRzMmMjq7vbNXxsW54wzgd5T7ETTpIjpbzeJWIAxW3TtbZnkTCySfW+fmX+l9/DLX1vf0DycwbrPJH2Vn+H+zE++MlnuWP65TUes23/+9wLf24+WfFj+5DuzQORMZuYYLh71P33TycCRja621bXRFY8hueNZ/JEr2DdsWcWuv1x17LYmeDfnieP4O8IVxcmt0xJnSGFDaar9ytSffL7TJI9LqTYVmP8/tszipwAC/aBw8xVuaBeX+frwPB/eJya30N4huZKwOfrqisY0pjqzdcypEuhZWOlb7Vf7tacyuDNgNZld58/79Ea9fnMYg5dEY1/Biz1VnK6e358mnPMbsD7x2Spild5pSG6An5oKmfPCuwPNVbY4QMWiJ/Jh3Mli+mFqy1BrqAsK6fR0TLXfJViM7iNeP6EMjnD59z0EwFAPDnnV6tMc/HolPwdNSPcUHeGjn4+nNPHpNM4TSxvK5qTxolBDlZ9JhNMYfTlNpCpTb8BTlF1BLAQIUABQAAAAIALy7s0xXGshajQMAAD0NAAAHAAAAAAAAAAAAAAC2gQAAAAB1c2VyLmpzUEsFBgAAAAABAAEANQAAALIDAAAAAA=="}}}, "desiredCapabilities": {"browserName": "firefox", "acceptInsecureCerts": true, "moz:firefoxOptions": {"profile": "UEsDBBQAAAAIALy7s0xXGshajQMAAD0NAAAHAAAAdXNlci5qc6VWTW/UMBC9I/EfUE8gsVbLxwVOpS0SUkURq4qj5diTjbuObezxpvvvGScbiLabD+CWj/c89puZN04RAvcBypdnRXANvTHlatZoq1zDVKo9AysKA+rs9QsMCV59fP4sPSUZgRBCsgN0KUwcg1toUBQsBUPAM1G4hB8KI+z2bJLgxQYWRogoAibPMoWg5zOwytVwgC7ZzjGNux0dXytgdURn22X0xroAYyvQJ3Vnf7Q6x4tzpi0Gd//9dmYDOTm1eOSyChSaRxm0R07Cc9R1Dvv2+KQ9YyE0gHcBuTCGP0QOjxI8amfj6fQ/iJ3oFmauw7FYueaLvaJHZ+A0ywI2LmyZFMTZwSpHFGZFgJ2WcwmOIFPQuGcy9rU5hjxOUgNGZtXmy26KyoRSOp9VzK3SQKECHTBwIbOOPFGSU0RQXELAEU0HrBhTjvmbpekDhDlaJwq3IovLYQd2LJTwniWvqHeZSOhGdByglvWe0tEbsQd1c3G+/uqQkkqMd2No11jjhKIqtSR1aCvoRwV2nZOg7WYm2s397SXr+2/apVroW9ZlY9bStN1SVYOlLiBz69L9ZhZMTtW55wTalSURxuq2RwUQKusDCJJ2+1mHiJekiBzrq9/uJEpon0m8pXY5pNTCNCIsdloQQVaHCpnFmjImnxu+N/9Ri4UYs6EgmShJ0XZCSabHZRCxmotTgTFMViC311CKZPBT92eGRzMmMjq7vbNXxsW54wzgd5T7ETTpIjpbzeJWIAxW3TtbZnkTCySfW+fmX+l9/DLX1vf0DycwbrPJH2Vn+H+zE++MlnuWP65TUes23/+9wLf24+WfFj+5DuzQORMZuYYLh71P33TycCRja621bXRFY8hueNZ/JEr2DdsWcWuv1x17LYmeDfnieP4O8IVxcmt0xJnSGFDaar9ytSffL7TJI9LqTYVmP8/tszipwAC/aBw8xVuaBeX+frwPB/eJya30N4huZKwOfrqisY0pjqzdcypEuhZWOlb7Vf7tacyuDNgNZld58/79Ea9fnMYg5dEY1/Biz1VnK6e358mnPMbsD7x2Spild5pSG6An5oKmfPCuwPNVbY4QMWiJ/Jh3Mli+mFqy1BrqAsK6fR0TLXfJViM7iNeP6EMjnD59z0EwFAPDnnV6tMc/HolPwdNSPcUHeGjn4+nNPHpNM4TSxvK5qTxolBDlZ9JhNMYfTlNpCpTb8BTlF1BLAQIUABQAAAAIALy7s0xXGshajQMAAD0NAAAHAAAAAAAAAAAAAAC2gQAAAAB1c2VyLmpzUEsFBgAAAAABAAEANQAAALIDAAAAAA=="}}}</msg>
+<msg timestamp="20180519 23:30:02.848" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:02.849" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/timeouts {"script": 5000}</msg>
+<msg timestamp="20180519 23:30:02.852" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:02.852" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/timeouts {"implicit": 0}</msg>
+<msg timestamp="20180519 23:30:02.855" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:02.855" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/url {"url": "about:blank"}</msg>
+<msg timestamp="20180519 23:30:02.888" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:02.888" level="DEBUG">Opened browser with session id 54c67af9-b41e-40e6-a895-f02ea27f2c8e.</msg>
+<status status="PASS" starttime="20180519 23:29:56.506" endtime="20180519 23:30:02.889"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:29:56.506" endtime="20180519 23:30:02.889"></status>
+</kw>
+<kw name="Test Multiple Login Scenarios" library="CarsApp">
+<arguments>
+<arg>${UNREGISTERED_USER}</arg>
+</arguments>
+<kw name="Navigate to Sign In Page" library="CarsApp">
+<kw name="Navigate To" library="SignIn">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:02.892" level="INFO">Opening url 'https://9gag.com/'</msg>
+<msg timestamp="20180519 23:30:02.892" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/url {"url": "https://9gag.com/"}</msg>
+<msg timestamp="20180519 23:30:14.399" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:02.892" endtime="20180519 23:30:14.399"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:02.891" endtime="20180519 23:30:14.400"></status>
+</kw>
+<kw name="Open signin form" library="SignIn">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${SIGNIN_BTN}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:14.402" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//a[contains(text(),'Log in')]"}</msg>
+<msg timestamp="20180519 23:30:14.423" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.423" level="DEBUG">GET http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/ea8ae421-f65a-48a0-854c-9ded51be03ae/enabled {"id": "ea8ae421-f65a-48a0-854c-9ded51be03ae"}</msg>
+<msg timestamp="20180519 23:30:14.439" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.439" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/execute/sync {"script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"async autofocus autoplay checked compact complete controls declare defaultchecked defaultselected defer disabled draggable ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap open paused pubdate readonly required reversed scoped seamless seeking selected spellcheck truespeed willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);", "args": [{"ELEMENT": "ea8ae421-f65a-48a0-854c-9ded51be03ae", "element-6066-11e4-a52e-4f735466cecf": "ea8ae421-f65a-48a0-854c-9ded51be03ae"}, "readonly"]}</msg>
+<msg timestamp="20180519 23:30:14.448" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:14.401" endtime="20180519 23:30:14.449"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGNIN_BTN}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:14.450" level="INFO">Clicking element 'xpath=//a[contains(text(),'Log in')]'.</msg>
+<msg timestamp="20180519 23:30:14.450" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//a[contains(text(),'Log in')]"}</msg>
+<msg timestamp="20180519 23:30:14.458" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.458" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/ea8ae421-f65a-48a0-854c-9ded51be03ae/click {"id": "ea8ae421-f65a-48a0-854c-9ded51be03ae"}</msg>
+<msg timestamp="20180519 23:30:14.836" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:14.449" endtime="20180519 23:30:14.837"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:14.400" endtime="20180519 23:30:14.837"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:02.891" endtime="20180519 23:30:14.838"></status>
+</kw>
+<kw name="Attempt Login" library="CarsApp">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Email}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials.Email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials.Email}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:14.841" level="INFO">Typing text 'someone@notregistered.com' into text field 'id=login-email-name'.</msg>
+<msg timestamp="20180519 23:30:14.842" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "css selector", "value": "[id=\"login-email-name\"]"}</msg>
+<msg timestamp="20180519 23:30:14.848" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.848" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/030a4836-c4d9-4e53-a547-c99792d527e5/clear {"id": "030a4836-c4d9-4e53-a547-c99792d527e5"}</msg>
+<msg timestamp="20180519 23:30:14.867" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.868" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/030a4836-c4d9-4e53-a547-c99792d527e5/value {"text": "someone@notregistered.com", "value": ["s", "o", "m", "e", "o", "n", "e", "@", "n", "o", "t", "r", "e", "g", "i", "s", "t", "e", "r", "e", "d", ".", "c", "o", "m"], "id": "030a4836-c4d9-4e53-a547-c99792d527e5"}</msg>
+<msg timestamp="20180519 23:30:14.911" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:14.841" endtime="20180519 23:30:14.912"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:14.840" endtime="20180519 23:30:14.912"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Password}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:14.914" level="INFO">Typing text 'TestPassword!' into text field 'id=login-email-password'.</msg>
+<msg timestamp="20180519 23:30:14.915" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "css selector", "value": "[id=\"login-email-password\"]"}</msg>
+<msg timestamp="20180519 23:30:14.931" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.931" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/a4c882ca-81be-49cd-83fb-fbdad093441d/clear {"id": "a4c882ca-81be-49cd-83fb-fbdad093441d"}</msg>
+<msg timestamp="20180519 23:30:14.938" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.939" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/a4c882ca-81be-49cd-83fb-fbdad093441d/value {"text": "TestPassword!", "value": ["T", "e", "s", "t", "P", "a", "s", "s", "w", "o", "r", "d", "!"], "id": "a4c882ca-81be-49cd-83fb-fbdad093441d"}</msg>
+<msg timestamp="20180519 23:30:14.970" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:14.914" endtime="20180519 23:30:14.970"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:14.913" endtime="20180519 23:30:14.971"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:14.839" endtime="20180519 23:30:14.972"></status>
+</kw>
+<kw name="Click Submit" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:14.975" level="INFO">Clicking button 'xpath=//*[@id="login-email"]/div[3]/input'.</msg>
+<msg timestamp="20180519 23:30:14.976" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//*[@id=\"login-email\"]/div[3]/input"}</msg>
+<msg timestamp="20180519 23:30:14.992" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.992" level="DEBUG">GET http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/cf2d4f6b-46ed-42fb-b94f-edd434b36470/name {"id": "cf2d4f6b-46ed-42fb-b94f-edd434b36470"}</msg>
+<msg timestamp="20180519 23:30:14.997" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:14.997" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/cf2d4f6b-46ed-42fb-b94f-edd434b36470/click {"id": "cf2d4f6b-46ed-42fb-b94f-edd434b36470"}</msg>
+<msg timestamp="20180519 23:30:19.791" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:14.974" endtime="20180519 23:30:19.792"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:14.973" endtime="20180519 23:30:19.792"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180519 23:30:20.794" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20180519 23:30:19.793" endtime="20180519 23:30:20.794"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:14.838" endtime="20180519 23:30:20.794"></status>
+</kw>
+<kw name="Verify Login Page Error Message" library="CarsApp">
+<arguments>
+<arg>${Credentials.ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Verify Error Message" library="SignIn">
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:20.797" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/frame {"id": null}</msg>
+<msg timestamp="20180519 23:30:20.804" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:20.804" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//*[contains(., 'Wrong Username/Email and password combination.')]"}</msg>
+<msg timestamp="20180519 23:30:20.824" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:20.824" level="INFO">Current page contains text 'Wrong Username/Email and password combination.'.</msg>
+<status status="PASS" starttime="20180519 23:30:20.796" endtime="20180519 23:30:20.824"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:20.796" endtime="20180519 23:30:20.825"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:20.795" endtime="20180519 23:30:20.825"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:02.890" endtime="20180519 23:30:20.825"></status>
+</kw>
+<kw name="Test Multiple Login Scenarios" library="CarsApp">
+<arguments>
+<arg>${INVALID_PASSWORD_USER}</arg>
+</arguments>
+<kw name="Navigate to Sign In Page" library="CarsApp">
+<kw name="Navigate To" library="SignIn">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:20.827" level="INFO">Opening url 'https://9gag.com/'</msg>
+<msg timestamp="20180519 23:30:20.828" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/url {"url": "https://9gag.com/"}</msg>
+<msg timestamp="20180519 23:30:27.220" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:20.827" endtime="20180519 23:30:27.220"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:20.827" endtime="20180519 23:30:27.221"></status>
+</kw>
+<kw name="Open signin form" library="SignIn">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${SIGNIN_BTN}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:27.223" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//a[contains(text(),'Log in')]"}</msg>
+<msg timestamp="20180519 23:30:27.267" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.268" level="DEBUG">GET http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/2155c41b-98e2-4713-b4bf-c05b2ac4d8f5/enabled {"id": "2155c41b-98e2-4713-b4bf-c05b2ac4d8f5"}</msg>
+<msg timestamp="20180519 23:30:27.286" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.287" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/execute/sync {"script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"async autofocus autoplay checked compact complete controls declare defaultchecked defaultselected defer disabled draggable ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap open paused pubdate readonly required reversed scoped seamless seeking selected spellcheck truespeed willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);", "args": [{"ELEMENT": "2155c41b-98e2-4713-b4bf-c05b2ac4d8f5", "element-6066-11e4-a52e-4f735466cecf": "2155c41b-98e2-4713-b4bf-c05b2ac4d8f5"}, "readonly"]}</msg>
+<msg timestamp="20180519 23:30:27.300" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:27.222" endtime="20180519 23:30:27.300"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGNIN_BTN}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:27.301" level="INFO">Clicking element 'xpath=//a[contains(text(),'Log in')]'.</msg>
+<msg timestamp="20180519 23:30:27.301" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//a[contains(text(),'Log in')]"}</msg>
+<msg timestamp="20180519 23:30:27.307" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.308" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/2155c41b-98e2-4713-b4bf-c05b2ac4d8f5/click {"id": "2155c41b-98e2-4713-b4bf-c05b2ac4d8f5"}</msg>
+<msg timestamp="20180519 23:30:27.769" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:27.301" endtime="20180519 23:30:27.769"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:27.221" endtime="20180519 23:30:27.769"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:20.826" endtime="20180519 23:30:27.770"></status>
+</kw>
+<kw name="Attempt Login" library="CarsApp">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Email}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials.Email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials.Email}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:27.773" level="INFO">Typing text 'someone@registereduser.com' into text field 'id=login-email-name'.</msg>
+<msg timestamp="20180519 23:30:27.773" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "css selector", "value": "[id=\"login-email-name\"]"}</msg>
+<msg timestamp="20180519 23:30:27.781" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.782" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/d9930adc-d2de-465b-afe2-b6a45dc785c3/clear {"id": "d9930adc-d2de-465b-afe2-b6a45dc785c3"}</msg>
+<msg timestamp="20180519 23:30:27.787" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.787" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/d9930adc-d2de-465b-afe2-b6a45dc785c3/value {"text": "someone@registereduser.com", "value": ["s", "o", "m", "e", "o", "n", "e", "@", "r", "e", "g", "i", "s", "t", "e", "r", "e", "d", "u", "s", "e", "r", ".", "c", "o", "m"], "id": "d9930adc-d2de-465b-afe2-b6a45dc785c3"}</msg>
+<msg timestamp="20180519 23:30:27.829" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:27.772" endtime="20180519 23:30:27.830"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:27.771" endtime="20180519 23:30:27.830"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Password}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:27.833" level="INFO">Typing text 'TestPassword!' into text field 'id=login-email-password'.</msg>
+<msg timestamp="20180519 23:30:27.833" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "css selector", "value": "[id=\"login-email-password\"]"}</msg>
+<msg timestamp="20180519 23:30:27.853" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.854" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/98d9997a-af28-4d85-8007-bb84b26846bd/clear {"id": "98d9997a-af28-4d85-8007-bb84b26846bd"}</msg>
+<msg timestamp="20180519 23:30:27.863" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.863" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/98d9997a-af28-4d85-8007-bb84b26846bd/value {"text": "TestPassword!", "value": ["T", "e", "s", "t", "P", "a", "s", "s", "w", "o", "r", "d", "!"], "id": "98d9997a-af28-4d85-8007-bb84b26846bd"}</msg>
+<msg timestamp="20180519 23:30:27.889" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:27.832" endtime="20180519 23:30:27.889"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:27.831" endtime="20180519 23:30:27.890"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:27.770" endtime="20180519 23:30:27.890"></status>
+</kw>
+<kw name="Click Submit" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:27.892" level="INFO">Clicking button 'xpath=//*[@id="login-email"]/div[3]/input'.</msg>
+<msg timestamp="20180519 23:30:27.893" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//*[@id=\"login-email\"]/div[3]/input"}</msg>
+<msg timestamp="20180519 23:30:27.902" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.902" level="DEBUG">GET http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/0f2c1f81-fb6d-4eda-b943-c3f5aaaeea88/name {"id": "0f2c1f81-fb6d-4eda-b943-c3f5aaaeea88"}</msg>
+<msg timestamp="20180519 23:30:27.929" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:27.930" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/0f2c1f81-fb6d-4eda-b943-c3f5aaaeea88/click {"id": "0f2c1f81-fb6d-4eda-b943-c3f5aaaeea88"}</msg>
+<msg timestamp="20180519 23:30:33.301" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:27.892" endtime="20180519 23:30:33.301"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:27.891" endtime="20180519 23:30:33.302"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180519 23:30:34.304" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20180519 23:30:33.302" endtime="20180519 23:30:34.304"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:27.770" endtime="20180519 23:30:34.305"></status>
+</kw>
+<kw name="Verify Login Page Error Message" library="CarsApp">
+<arguments>
+<arg>${Credentials.ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Verify Error Message" library="SignIn">
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:34.308" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/frame {"id": null}</msg>
+<msg timestamp="20180519 23:30:34.313" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:34.314" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//*[contains(., 'Wrong Username/Email and password combination.')]"}</msg>
+<msg timestamp="20180519 23:30:34.330" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:34.330" level="INFO">Current page contains text 'Wrong Username/Email and password combination.'.</msg>
+<status status="PASS" starttime="20180519 23:30:34.307" endtime="20180519 23:30:34.330"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:34.306" endtime="20180519 23:30:34.331"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:34.305" endtime="20180519 23:30:34.332"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:20.826" endtime="20180519 23:30:34.333"></status>
+</kw>
+<kw name="Test Multiple Login Scenarios" library="CarsApp">
+<arguments>
+<arg>${BLANK_CREDENTIALS_USER}</arg>
+</arguments>
+<kw name="Navigate to Sign In Page" library="CarsApp">
+<kw name="Navigate To" library="SignIn">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${BASE_URL.${ENVIRONMENT}}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:34.337" level="INFO">Opening url 'https://9gag.com/'</msg>
+<msg timestamp="20180519 23:30:34.338" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/url {"url": "https://9gag.com/"}</msg>
+<msg timestamp="20180519 23:30:36.987" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:34.336" endtime="20180519 23:30:36.988"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:34.336" endtime="20180519 23:30:36.988"></status>
+</kw>
+<kw name="Open signin form" library="SignIn">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${SIGNIN_BTN}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:36.990" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//a[contains(text(),'Log in')]"}</msg>
+<msg timestamp="20180519 23:30:37.097" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:37.097" level="DEBUG">GET http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/66253ec9-3625-444b-8047-8b9c744cbd68/enabled {"id": "66253ec9-3625-444b-8047-8b9c744cbd68"}</msg>
+<msg timestamp="20180519 23:30:37.136" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:37.136" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/execute/sync {"script": "return (function(){return function(){var d=this;function f(a){return\"string\"==typeof a};function h(a,b){this.code=a;this.a=l[a]||m;this.message=b||\"\";a=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")});b=a.length-5;if(0&gt;b||a.indexOf(\"Error\",b)!=b)a+=\"Error\";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||\"\"}\n(function(){var a=Error;function b(){}b.prototype=a.prototype;h.b=a.prototype;h.prototype=new b;h.prototype.constructor=h;h.a=function(b,c,g){for(var e=Array(arguments.length-2),k=2;k&lt;arguments.length;k++)e[k-2]=arguments[k];return a.prototype[c].apply(b,e)}})();var m=\"unknown error\",l={15:\"element not selectable\",11:\"element not visible\"};l[31]=m;l[30]=m;l[24]=\"invalid cookie domain\";l[29]=\"invalid element coordinates\";l[12]=\"invalid element state\";l[32]=\"invalid selector\";l[51]=\"invalid selector\";\nl[52]=\"invalid selector\";l[17]=\"javascript error\";l[405]=\"unsupported operation\";l[34]=\"move target out of bounds\";l[27]=\"no such alert\";l[7]=\"no such element\";l[8]=\"no such frame\";l[23]=\"no such window\";l[28]=\"script timeout\";l[33]=\"session not created\";l[10]=\"stale element reference\";l[21]=\"timeout\";l[25]=\"unable to set cookie\";l[26]=\"unexpected alert open\";l[13]=m;l[9]=\"unknown command\";h.prototype.toString=function(){return this.name+\": \"+this.message};var n;a:{var p=d.navigator;if(p){var q=p.userAgent;if(q){n=q;break a}}n=\"\"}function r(a){return-1!=n.indexOf(a)};function t(a,b){for(var e=a.length,c=f(a)?a.split(\"\"):a,g=0;g&lt;e;g++)g in c&amp;&amp;b.call(void 0,c[g],g,a)};function v(){return r(\"iPhone\")&amp;&amp;!r(\"iPod\")&amp;&amp;!r(\"iPad\")};function w(){return(r(\"Chrome\")||r(\"CriOS\"))&amp;&amp;!r(\"Edge\")};var x=r(\"Opera\"),y=r(\"Trident\")||r(\"MSIE\"),z=r(\"Edge\"),A=r(\"Gecko\")&amp;&amp;!(-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\"))&amp;&amp;!(r(\"Trident\")||r(\"MSIE\"))&amp;&amp;!r(\"Edge\"),aa=-1!=n.toLowerCase().indexOf(\"webkit\")&amp;&amp;!r(\"Edge\");function B(){var a=d.document;return a?a.documentMode:void 0}var C;\na:{var D=\"\",E=function(){var a=n;if(A)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(z)return/Edge\\/([\\d\\.]+)/.exec(a);if(y)return/\\b(?:MSIE|rv)[: ]([^\\);]+)(\\)|;)/.exec(a);if(aa)return/WebKit\\/(\\S+)/.exec(a);if(x)return/(?:Version)[ \\/]?(\\S+)/.exec(a)}();E&amp;&amp;(D=E?E[1]:\"\");if(y){var F=B();if(null!=F&amp;&amp;F&gt;parseFloat(D)){C=String(F);break a}}C=D}var G;var H=d.document;G=H&amp;&amp;y?B()||(\"CSS1Compat\"==H.compatMode?parseInt(C,10):5):void 0;var ba=r(\"Firefox\"),ca=v()||r(\"iPod\"),da=r(\"iPad\"),I=r(\"Android\")&amp;&amp;!(w()||r(\"Firefox\")||r(\"Opera\")||r(\"Silk\")),ea=w(),J=r(\"Safari\")&amp;&amp;!(w()||r(\"Coast\")||r(\"Opera\")||r(\"Edge\")||r(\"Silk\")||r(\"Android\"))&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\"));function K(a){return(a=a.exec(n))?a[1]:\"\"}(function(){if(ba)return K(/Firefox\\/([0-9.]+)/);if(y||z||x)return C;if(ea)return v()||r(\"iPad\")||r(\"iPod\")?K(/CriOS\\/([0-9.]+)/):K(/Chrome\\/([0-9.]+)/);if(J&amp;&amp;!(v()||r(\"iPad\")||r(\"iPod\")))return K(/Version\\/([0-9.]+)/);if(ca||da){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(n);if(a)return a[1]+\".\"+a[2]}else if(I)return(a=K(/Android\\s+([0-9.]+)/))?a:K(/Version\\/([0-9.]+)/);return\"\"})();var L,M=function(){if(!A)return!1;var a=d.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(g){return!1}var b=a.classes,a=a.interfaces,e=b[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),c=b[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;L=function(a){e.compare(c,\"\"+a)};return!0}(),N=y&amp;&amp;!(8&lt;=Number(G)),fa=y&amp;&amp;!(9&lt;=Number(G));I&amp;&amp;M&amp;&amp;L(2.3);I&amp;&amp;M&amp;&amp;L(4);J&amp;&amp;M&amp;&amp;L(6);var ga={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},O={IMG:\" \",BR:\"\\n\"};function P(a,b,e){if(!(a.nodeName in ga))if(3==a.nodeType)e?b.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):b.push(a.nodeValue);else if(a.nodeName in O)b.push(O[a.nodeName]);else for(a=a.firstChild;a;)P(a,b,e),a=a.nextSibling};function Q(a,b){b=b.toLowerCase();return\"style\"==b?ha(a.style.cssText):N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"INPUT\")?a.value:fa&amp;&amp;!0===a[b]?String(a.getAttribute(b)):(a=a.getAttributeNode(b))&amp;&amp;a.specified?a.value:null}var ia=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^']*'){2})*[^']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction ha(a){var b=[];t(a.split(ia),function(a){var c=a.indexOf(\":\");0&lt;c&amp;&amp;(a=[a.slice(0,c),a.slice(c+1)],2==a.length&amp;&amp;b.push(a[0].toLowerCase(),\":\",a[1],\";\"))});b=b.join(\"\");return b=\";\"==b.charAt(b.length-1)?b:b+\";\"}function S(a,b){N&amp;&amp;\"value\"==b&amp;&amp;R(a,\"OPTION\")&amp;&amp;null===Q(a,\"value\")?(b=[],P(a,b,!1),a=b.join(\"\")):a=a[b];return a}function R(a,b){b&amp;&amp;\"string\"!==typeof b&amp;&amp;(b=b.toString());return!!a&amp;&amp;1==a.nodeType&amp;&amp;(!b||a.tagName.toUpperCase()==b)}\nfunction T(a){return R(a,\"OPTION\")?!0:R(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var ja={\"class\":\"className\",readonly:\"readOnly\"},U=\"async autofocus autoplay checked compact complete controls declare defaultchecked defaultselected defer disabled draggable ended formnovalidate hidden indeterminate iscontenteditable ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap open paused pubdate readonly required reversed scoped seamless seeking selected spellcheck truespeed willvalidate\".split(\" \");function V(a,b){var e=null,c=b.toLowerCase();if(\"style\"==c)return(e=a.style)&amp;&amp;!f(e)&amp;&amp;(e=e.cssText),e;if((\"selected\"==c||\"checked\"==c)&amp;&amp;T(a)){if(!T(a))throw new h(15,\"Element is not selectable\");b=\"selected\";e=a.type&amp;&amp;a.type.toLowerCase();if(\"checkbox\"==e||\"radio\"==e)b=\"checked\";return S(a,b)?\"true\":null}var g=R(a,\"A\");if(R(a,\"IMG\")&amp;&amp;\"src\"==c||g&amp;&amp;\"href\"==c)return(e=Q(a,c))&amp;&amp;(e=S(a,c)),e;if(\"spellcheck\"==c){e=Q(a,c);if(null!==e){if(\"false\"==e.toLowerCase())return\"false\";if(\"true\"==e.toLowerCase())return\"true\"}return S(a,\nc)+\"\"}g=ja[b]||b;a:if(f(U))c=f(c)&amp;&amp;1==c.length?U.indexOf(c,0):-1;else{for(var u=0;u&lt;U.length;u++)if(u in U&amp;&amp;U[u]===c){c=u;break a}c=-1}if(0&lt;=c)return(e=null!==Q(a,b)||S(a,g))?\"true\":null;try{var k=S(a,g)}catch(ka){}(c=null==k)||(c=typeof k,c=\"object\"==c&amp;&amp;null!=k||\"function\"==c);c?e=Q(a,b):e=k;return null!=e?e.toString():null}var W=[\"_\"],X=d;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);\nfor(var Y;W.length&amp;&amp;(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==V;Z?X[Y]=V:X[Y]&amp;&amp;X[Y]!==Object.prototype[Y]?X=X[Y]:X=X[Y]={}};; return this._.apply(null,arguments);}.apply({navigator:typeof window!='undefined'?window.navigator:null,document:typeof window!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);", "args": [{"ELEMENT": "66253ec9-3625-444b-8047-8b9c744cbd68", "element-6066-11e4-a52e-4f735466cecf": "66253ec9-3625-444b-8047-8b9c744cbd68"}, "readonly"]}</msg>
+<msg timestamp="20180519 23:30:37.149" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:36.989" endtime="20180519 23:30:37.149"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGNIN_BTN}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:37.150" level="INFO">Clicking element 'xpath=//a[contains(text(),'Log in')]'.</msg>
+<msg timestamp="20180519 23:30:37.151" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//a[contains(text(),'Log in')]"}</msg>
+<msg timestamp="20180519 23:30:37.167" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:37.168" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/66253ec9-3625-444b-8047-8b9c744cbd68/click {"id": "66253ec9-3625-444b-8047-8b9c744cbd68"}</msg>
+<msg timestamp="20180519 23:30:37.420" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:37.150" endtime="20180519 23:30:37.420"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:36.988" endtime="20180519 23:30:37.421"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:34.335" endtime="20180519 23:30:37.421"></status>
+</kw>
+<kw name="Attempt Login" library="CarsApp">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Enter Credentials" library="SignIn">
+<arguments>
+<arg>${Credentials}</arg>
+</arguments>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Email}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_EMAIL}</arg>
+<arg>${Credentials.Email}</arg>
+</arguments>
+<status status="PASS" starttime="20180519 23:30:37.423" endtime="20180519 23:30:37.424"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is false.</doc>
+<arguments>
+<arg>'${Credentials.Password}' == '#BLANK'</arg>
+<arg>Input Text</arg>
+<arg>${SIGN_IN_PASSWORD}</arg>
+<arg>${Credentials.Password}</arg>
+</arguments>
+<status status="PASS" starttime="20180519 23:30:37.424" endtime="20180519 23:30:37.425"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:37.422" endtime="20180519 23:30:37.425"></status>
+</kw>
+<kw name="Click Submit" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:37.426" level="INFO">Clicking button 'xpath=//*[@id="login-email"]/div[3]/input'.</msg>
+<msg timestamp="20180519 23:30:37.426" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//*[@id=\"login-email\"]/div[3]/input"}</msg>
+<msg timestamp="20180519 23:30:37.440" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:37.440" level="DEBUG">GET http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/664b07dd-b4bd-4039-a791-89dbe947508f/name {"id": "664b07dd-b4bd-4039-a791-89dbe947508f"}</msg>
+<msg timestamp="20180519 23:30:37.448" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:37.449" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/element/664b07dd-b4bd-4039-a791-89dbe947508f/click {"id": "664b07dd-b4bd-4039-a791-89dbe947508f"}</msg>
+<msg timestamp="20180519 23:30:41.294" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:37.426" endtime="20180519 23:30:41.294"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:37.425" endtime="20180519 23:30:41.295"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180519 23:30:42.296" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20180519 23:30:41.295" endtime="20180519 23:30:42.296"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:37.422" endtime="20180519 23:30:42.296"></status>
+</kw>
+<kw name="Verify Login Page Error Message" library="CarsApp">
+<arguments>
+<arg>${Credentials.ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Verify Error Message" library="SignIn">
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${ExpectedErrorMessage}</arg>
+</arguments>
+<msg timestamp="20180519 23:30:42.298" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/frame {"id": null}</msg>
+<msg timestamp="20180519 23:30:42.325" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:42.326" level="DEBUG">POST http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e/elements {"using": "xpath", "value": "//*[contains(., 'Wrong Username/Email and password combination.')]"}</msg>
+<msg timestamp="20180519 23:30:42.450" level="DEBUG">Finished Request</msg>
+<msg timestamp="20180519 23:30:42.451" level="INFO">Current page contains text 'Wrong Username/Email and password combination.'.</msg>
+<status status="PASS" starttime="20180519 23:30:42.298" endtime="20180519 23:30:42.451"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:42.297" endtime="20180519 23:30:42.451"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:42.297" endtime="20180519 23:30:42.451"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:34.334" endtime="20180519 23:30:42.452"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<msg timestamp="20180519 23:30:42.453" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20180519 23:30:42.453" level="DEBUG">DELETE http://127.0.0.1:4442/session/54c67af9-b41e-40e6-a895-f02ea27f2c8e {}</msg>
+<msg timestamp="20180519 23:30:43.581" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20180519 23:30:42.453" endtime="20180519 23:30:43.585"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:30:42.452" endtime="20180519 23:30:43.586"></status>
+</kw>
+<status status="PASS" starttime="20180519 23:29:56.505" endtime="20180519 23:30:43.586" critical="yes"></status>
+</test>
+<doc>Demonstrate a need for data-driven testing</doc>
+<status status="PASS" starttime="20180519 23:29:56.297" endtime="20180519 23:30:43.587"></status>
+</suite>
+<status status="PASS" starttime="20180519 23:29:56.295" endtime="20180519 23:30:43.589"></status>
+</suite>
+<status status="PASS" starttime="20180519 23:29:56.267" endtime="20180519 23:30:43.592"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="RFDataDrivenBuiltIn">RFDataDrivenBuiltIn</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Tests">RFDataDrivenBuiltIn.Tests</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="Cars">RFDataDrivenBuiltIn.Tests.Cars</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
