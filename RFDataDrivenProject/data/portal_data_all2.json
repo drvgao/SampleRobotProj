@@ -1,0 +1,11 @@
+{
+	"Phones": {
+		"debug": "on",
+		"phone1": {
+			"key": "value"
+		},
+		"phone2": {
+			"key": "value"
+		}
+	}
+}

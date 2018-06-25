@@ -1,226 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0.3 (Python 3.6.5 on win32)" generated="20180519 17:34:11.092">
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180625 11:00:00.617">
 <suite id="s1" name="RFDataDrivenProject" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenProject">
-<suite id="s1-s1" name="Tests" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenProject\Tests">
-<suite id="s1-s1-s1" name="PortalLogin" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenProject\Tests\PortalLogin.robot">
-<test id="s1-s1-s1-t1" name="Login">
-<kw name="Begin Web Test" library="Common" type="setup">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the given ``url``.</doc>
+<suite id="s1-s1" name="CustomLibs" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenProject\CustomLibs">
+<suite id="s1-s1-s1" name="Jsonutil" source="C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenProject\CustomLibs\jsonutil.robot">
+<test id="s1-s1-s1-t1" name="Example of how to load JSON">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:11.359" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<msg timestamp="20180519 17:34:14.371" level="DEBUG">POST http://127.0.0.1:48148/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any"}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY"}}</msg>
-<msg timestamp="20180519 17:34:18.091" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:18.091" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/timeouts/async_script {"ms": 5000.0, "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:18.093" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:18.093" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/timeouts/implicit_wait {"ms": 0.0, "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:18.094" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:18.094" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/url {"url": "about:blank", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:18.191" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:18.191" level="DEBUG">Opened browser with session id 39490876c7c8964a7f1e50b548f2d98e.</msg>
-<status status="PASS" starttime="20180519 17:34:11.359" endtime="20180519 17:34:18.192"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:11.358" endtime="20180519 17:34:18.192"></status>
-</kw>
-<kw name="Navigate to Sign In Page" library="HomePageKWs">
-<kw name="Navigate To" library="HomePagePO">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>SEPARATOR=/</arg>
-<arg>${BASE_URL.${ENVIRONMENT}}</arg>
-<arg>${IGAMING_URL}</arg>
+<arg>${JSON_FILE_PATH}</arg>
 </arguments>
 <assign>
-<var>${BaseUrl}</var>
+<var>${json}</var>
 </assign>
-<msg timestamp="20180519 17:34:18.196" level="INFO">${BaseUrl} = http://refdevinteractive1.dev.igt.com/content/interactive/igaming/en.html</msg>
-<status status="PASS" starttime="20180519 17:34:18.195" endtime="20180519 17:34:18.197"></status>
+<msg timestamp="20180625 11:00:00.757" level="INFO" html="yes">Getting file '&lt;a href="file://C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenProject\data\sample.json"&gt;C:\Users\rdurgam\git\SampleRobotProj\RFDataDrivenProject\data\sample.json&lt;/a&gt;'.</msg>
+<msg timestamp="20180625 11:00:00.758" level="INFO">${json} = {
+	"firstName": "Jane",
+	"lastName": "Doe",
+	"hobbies": [
+		"running",
+		"sky diving",
+		"singing"
+	],
+	"age": 35,
+	"children": [
+		{
+			"firstName": "Alice",
+			"age": 6
+		},
+		{
+			"firstName": "Bob...</msg>
+<status status="PASS" starttime="20180625 11:00:00.756" endtime="20180625 11:00:00.758"></status>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
-<arg>${BaseUrl}</arg>
+<arg>json.loads('''${json}''') json</arg>
 </arguments>
-<msg timestamp="20180519 17:34:18.198" level="INFO">Opening url 'http://refdevinteractive1.dev.igt.com/content/interactive/igaming/en.html'</msg>
-<msg timestamp="20180519 17:34:18.198" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/url {"url": "http://refdevinteractive1.dev.igt.com/content/interactive/igaming/en.html", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:35.630" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:18.197" endtime="20180519 17:34:35.630"></status>
+<assign>
+<var>${object}</var>
+</assign>
+<msg timestamp="20180625 11:00:00.760" level="FAIL">Evaluating expression 'json.loads('''{
+	"firstName": "Jane",
+	"lastName": "Doe",
+	"hobbies": [
+		"running",
+		"sky diving",
+		"singing"
+	],
+	"age": 35,
+	"children": [
+		{
+			"firstName": "Alice",
+			"age": 6
+		},
+		{
+			"firstName": "Bob",
+			"age": 8
+		}
+	]
+}''') json' failed: SyntaxError: unexpected EOF while parsing (&lt;string&gt;, line 20)</msg>
+<msg timestamp="20180625 11:00:00.760" level="DEBUG">Traceback (most recent call last):
+  None</msg>
+<status status="FAIL" starttime="20180625 11:00:00.759" endtime="20180625 11:00:00.760"></status>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<msg timestamp="20180519 17:34:35.631" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/window/current/maximize {"windowHandle": "current", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:36.777" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:35.630" endtime="20180519 17:34:36.779"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:18.195" endtime="20180519 17:34:36.780"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:18.193" endtime="20180519 17:34:36.781"></status>
-</kw>
-<kw name="Attempt Login" library="HomePageKWs">
-<arguments>
-<arg>${REGISTERED_USER}</arg>
-</arguments>
-<kw name="Enter Credentials" library="HomePagePO">
-<arguments>
-<arg>${Credentials}</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is visible.</doc>
-<arguments>
-<arg>${LOGIN_BUTTON}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:36.794" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "xpath", "value": "//a[contains(text(),'Login')]", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:36.879" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:36.879" level="DEBUG">GET http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-1/displayed {"id": "0.40135963439672717-1", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:36.904" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:36.793" endtime="20180519 17:34:36.905"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${LOGIN_BUTTON}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:36.905" level="INFO">Clicking element 'xpath=//a[contains(text(),'Login')]'.</msg>
-<msg timestamp="20180519 17:34:36.906" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "xpath", "value": "//a[contains(text(),'Login')]", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:36.913" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:36.914" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-1/click {"id": "0.40135963439672717-1", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:36.993" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:36.905" endtime="20180519 17:34:36.994"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until element ``locator`` is visible.</doc>
-<arguments>
-<arg>${SIGN_IN_USERNAME}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:36.995" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "id", "value": "loginModal-username", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.024" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.025" level="DEBUG">GET http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-2/displayed {"id": "0.40135963439672717-2", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.121" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.321" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "id", "value": "loginModal-username", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.369" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.369" level="DEBUG">GET http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-2/displayed {"id": "0.40135963439672717-2", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.378" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:36.994" endtime="20180519 17:34:37.379"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${SIGN_IN_USERNAME}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:37.380" level="INFO">Clicking element 'id=loginModal-username'.</msg>
-<msg timestamp="20180519 17:34:37.381" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "id", "value": "loginModal-username", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.389" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.390" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-2/click {"id": "0.40135963439672717-2", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.661" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:37.380" endtime="20180519 17:34:37.661"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${SIGN_IN_USERNAME}</arg>
-<arg>${Credentials.User}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:37.663" level="INFO">Typing text 'intQA33' into text field 'id=loginModal-username'.</msg>
-<msg timestamp="20180519 17:34:37.664" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "id", "value": "loginModal-username", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.677" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.677" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-2/clear {"id": "0.40135963439672717-2", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.709" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.709" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-2/value {"text": "intQA33", "value": ["i", "n", "t", "Q", "A", "3", "3"], "id": "0.40135963439672717-2", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.817" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:37.662" endtime="20180519 17:34:37.817"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>${SIGN_IN_PASSWORD}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:37.818" level="INFO">Clicking element 'id=loginModal-password'.</msg>
-<msg timestamp="20180519 17:34:37.818" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "id", "value": "loginModal-password", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.841" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.841" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-3/click {"id": "0.40135963439672717-3", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.963" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:37.817" endtime="20180519 17:34:37.963"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${SIGN_IN_PASSWORD}</arg>
-<arg>${Credentials.Password}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:37.965" level="INFO">Typing text 'Welcome1' into text field 'id=loginModal-password'.</msg>
-<msg timestamp="20180519 17:34:37.965" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "id", "value": "loginModal-password", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:37.972" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:37.973" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-3/clear {"id": "0.40135963439672717-3", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:38.004" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:38.005" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-3/value {"text": "Welcome1", "value": ["W", "e", "l", "c", "o", "m", "e", "1"], "id": "0.40135963439672717-3", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:38.234" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:37.964" endtime="20180519 17:34:38.234"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:36.791" endtime="20180519 17:34:38.235"></status>
-</kw>
-<kw name="Click Submit" library="HomePagePO">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>${LOGIN_SUBMIT_BUTTON}</arg>
-</arguments>
-<msg timestamp="20180519 17:34:38.238" level="INFO">Clicking button 'Sign in'.</msg>
-<msg timestamp="20180519 17:34:38.239" level="DEBUG">GET http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/url {"sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:38.246" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:38.247" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "xpath", "value": "//input[(@id='Sign in' or @name='Sign in' or @value='Sign in' or @src='Sign in' or @src='http://refdevinteractive1.dev.igt.com/content/interactive/igaming/Sign in')]", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:38.282" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:38.283" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/elements {"using": "xpath", "value": "//button[(@id='Sign in' or @name='Sign in' or @value='Sign in' or normalize-space(descendant-or-self::text())='Sign in')]", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:38.305" level="DEBUG">Finished Request</msg>
-<msg timestamp="20180519 17:34:38.305" level="DEBUG">POST http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e/element/0.40135963439672717-4/click {"id": "0.40135963439672717-4", "sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:38.443" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:38.237" endtime="20180519 17:34:38.444"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:38.236" endtime="20180519 17:34:38.445"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1s</arg>
-</arguments>
-<msg timestamp="20180519 17:34:39.455" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20180519 17:34:38.446" endtime="20180519 17:34:39.455"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:36.782" endtime="20180519 17:34:39.456"></status>
-</kw>
-<kw name="End Web Test" library="Common" type="teardown">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<msg timestamp="20180519 17:34:39.457" level="DEBUG">Closing all browsers.</msg>
-<msg timestamp="20180519 17:34:39.457" level="DEBUG">DELETE http://127.0.0.1:48148/session/39490876c7c8964a7f1e50b548f2d98e {"sessionId": "39490876c7c8964a7f1e50b548f2d98e"}</msg>
-<msg timestamp="20180519 17:34:39.504" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20180519 17:34:39.457" endtime="20180519 17:34:42.502"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:39.456" endtime="20180519 17:34:42.502"></status>
-</kw>
-<status status="PASS" starttime="20180519 17:34:11.357" endtime="20180519 17:34:42.503" critical="yes"></status>
+<status status="FAIL" starttime="20180625 11:00:00.754" endtime="20180625 11:00:00.761" critical="yes">Evaluating expression 'json.loads('''{
+	"firstName": "Jane",
+	"lastName": "Doe",
+	"hobbies": [
+		"running",
+		"sky diving",
+		"singing"
+	],
+	"age": 35,
+	"children": [
+		{
+			"firstName": "Alice",
+			"age": 6
+		},
+		{
+			"firstName": "Bob",
+			"age": 8
+		}
+	]
+}''') json' failed: SyntaxError: unexpected EOF while parsing (&lt;string&gt;, line 20)</status>
 </test>
-<doc>Demonstrate a need for data-driven testing</doc>
-<status status="PASS" starttime="20180519 17:34:11.157" endtime="20180519 17:34:42.504"></status>
+<status status="FAIL" starttime="20180625 11:00:00.717" endtime="20180625 11:00:00.762"></status>
 </suite>
-<status status="PASS" starttime="20180519 17:34:11.152" endtime="20180519 17:34:42.506"></status>
+<status status="FAIL" starttime="20180625 11:00:00.715" endtime="20180625 11:00:00.764"></status>
 </suite>
-<status status="PASS" starttime="20180519 17:34:11.124" endtime="20180519 17:34:42.507"></status>
+<status status="FAIL" starttime="20180625 11:00:00.670" endtime="20180625 11:00:00.766"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="RFDataDrivenProject">RFDataDrivenProject</stat>
-<stat pass="1" fail="0" id="s1-s1" name="Tests">RFDataDrivenProject.Tests</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="PortalLogin">RFDataDrivenProject.Tests.PortalLogin</stat>
+<stat pass="0" fail="1" id="s1" name="RFDataDrivenProject">RFDataDrivenProject</stat>
+<stat pass="0" fail="1" id="s1-s1" name="CustomLibs">RFDataDrivenProject.CustomLibs</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="Jsonutil">RFDataDrivenProject.CustomLibs.Jsonutil</stat>
 </suite>
 </statistics>
 <errors>

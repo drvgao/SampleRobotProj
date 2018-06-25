@@ -899,31 +899,32 @@ Unable to read VR Path Registry from C:\Users\rdurgam\AppData\Local\openvr\openv
 1526752820865	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\rdurgam\AppData\Local\Temp\tmpaddon-e7cd1e
 1526753189538	addons.manager	DEBUG	Background update check beginning
 1526753189539	addons.manager	DEBUG	Background update check complete
-gre/modules/addons/PluginProvider.jsm
-1526752799903	addons.manager	DEBUG	Starting provider: XPIProvider
-1526752799903	addons.xpi	DEBUG	startup
-1526752799904	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
-1526752799904	addons.xpi	INFO	Removing all system add-on upgrades.
-1526752799905	addons.xpi	DEBUG	checkForChanges
-1526752799905	addons.xpi	DEBUG	Loaded add-on state: ${}
-1526752799906	addons.xpi	INFO	Mapping activity-stream@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\activity-stream@mozilla.org.xpi
-1526752799906	addons.xpi	INFO	Mapping aushelper@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
-1526752799906	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
-1526752799906	addons.xpi	INFO	Mapping followonsearch@mozilla.com to C:\Program Files\Mozilla Firefox\browser\features\followonsearch@mozilla.com.xpi
-1526752799907	addons.xpi	INFO	Mapping formautofill@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\formautofill@mozilla.org.xpi
-1526752799907	addons.xpi	INFO	Mapping onboarding@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\onboarding@mozilla.org.xpi
-1526752799907	addons.xpi	INFO	Mapping screenshots@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\screenshots@mozilla.org.xpi
-1526752799907	addons.xpi	INFO	Mapping webcompat@mozilla.org to C:\Program Files\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
-1526752799907	addons.xpi	DEBUG	New add-on activity-stream@mozilla.org in app-system-defaults
-1526752799909	addons.xpi	DEBUG	New add-on aushelper@mozilla.org in app-system-defaults
-1526752799910	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
-1526752799911	addons.xpi	DEBUG	New add-on followonsearch@mozilla.com in app-system-defaults
-1526752799911	addons.xpi	DEBUG	New add-on formautofill@mozilla.org in app-system-defaults
-1526752799912	addons.xpi	DEBUG	New add-on onboarding@mozilla.org in app-system-defaults
-1526752799913	addons.xpi	DEBUG	New add-on screenshots@mozilla.org in app-system-defaults
-1526752799913	addons.xpi	DEBUG	New add-on webcompat@mozilla.org in app-system-defaults
-1526752799914	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
-1526752799914	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+Unable to read VR Path Registry from C:\Users\rdurgam\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 8956, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526756584758	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1526756584758	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 30.1.0
+1526756584766	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 1.0
+1526756584767	addons.xpi	DEBUG	Calling bootstrap method shutdown on formautofill@mozilla.org version 1.0
+1526756584768	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.6
+1526756584768	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1526756584769	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1526756584769	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 2018.04.20.1103-b3b95672
+[Parent 8956, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\rdurgam\AppData\Local\openvr\openvrpaths.vrpath
+[Child 11796, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Unable to read VR Path Registry from C:\Users\rdurgam\AppData\Local\openvr\openvrpaths.vrpath
+[Child 11484, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11484, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526756584870	addons.manager	DEBUG	shutdown
+1526756584871	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1526756584871	addons.xpi	DEBUG	shutdown
+1526756584871	addons.xpi-utils	DEBUG	shutdown
+1526756584871	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1526756584872	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1526756584872	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1526756584872	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1526756584878	addons.manager	DEBUG	Async provider shutdown done
+add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
 1526752799914	addons.xpi	DEBUG	getInstallState changed: true, state: {}
 1526752799915	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
 1526752799922	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\rdurgam\AppData\Local\Temp\rust_mozprofile.Soyn8PnT7wyk\extensions.json

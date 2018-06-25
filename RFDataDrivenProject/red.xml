@@ -3,6 +3,10 @@
     <configVersion>1</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/rdev/robotprojs/robotenv/Lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="Csv" path="C:/Users/rdurgam/git/SampleRobotProj/RFDataDrivenProject/CustomLibs"/>
+    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/rdev/robotprojs/robotenv/Lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="REST" path="C:/rdev/robotprojs/robotenv/Lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="jsonutil" path="C:/Users/rdurgam/git/SampleRobotProj/RFDataDrivenProject/CustomLibs"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

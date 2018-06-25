@@ -9,7 +9,7 @@ Attempt Login
     [Arguments]  ${Credentials}
     HomePagePO.Enter Credentials  ${Credentials}
     HomePagePO.Click Submit
-    Sleep  1s
+    Sleep  10s
 
 Verify Login Page Error Message
     [Arguments]  ${ExpectedErrorMessage}
