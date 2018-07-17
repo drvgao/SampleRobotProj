@@ -1,21 +1,22 @@
 *** Settings ***
 Documentation  Use this layer to get data from external files
 Library  ../CustomLibs/jsonutil.py
-Resource  ../Data/InputData.robot
+Resource  ../Resources/data/InputData.robot
 
 *** Test Cases ***
 JSON Example1 read fron json
     ${json_obj} =  Load JSON From File  ${JSON_FILE_PATH}
     log to console  ${json_obj}
     
-
 JSON Example2 read a node value from json
     ${json_obj} =  Load JSON From File  ${JSON_FILE_PATH}
     ${datatype}=  evaluate  str(type($json_obj))
     log to console  ${datatype}
-    log to console  ${json_obj['firstName']}
+    log to console  ${json_obj['children'][0]['firstName']}
+    log to console  ${json_obj['hobbies'][1]}
 
 JSON Example3 update a node value in json
+    # https://stackoverflow.com/questions/35262216/json-handling-in-robot
     ${json_obj} =  Load JSON From File  ${JSON_FILE_PATH}
     ${datatype}=  evaluate  str(type($json_obj))
     log to console  ${datatype}

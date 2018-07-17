@@ -1,5 +1,5 @@
 *** Settings ***
-Resource  ../Resources/PO/HomePagePO.robot
+Resource  ../PO/HomePagePO.robot
 
 *** Keywords ***
 Navigate to Sign In Page

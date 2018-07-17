@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation  Demonstrate a need for data-driven testing
-Resource  ../Resources/Data/InputData.robot
-Resource  ../Resources/kws/Common.robot
-Resource  ../Resources/kws/HomePageKWs.robot
+Resource  ../../Resources/data/InputData.robot
+Resource  ../../Resources/kws/Common.robot
+Resource  ../../Resources/kws/HomePageKWs.robot
 Test Setup  Common.Begin Web Test
 Test Teardown  Common.End Web Test
 
